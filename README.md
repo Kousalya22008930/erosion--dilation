@@ -25,7 +25,7 @@ DEVELOPED BY : KOUSALYA A.
 REGISTER NO: 212222230068
 ```
 ## Program:
-# Import the necessary packages
+### Import the necessary packages
 ``` Python
 import cv2
 import matplotlib.pyplot as plt
@@ -33,14 +33,14 @@ import matplotlib.pyplot as plt
 # Create a blank image (100 pixels high and 400 pixels wide)
 img = np.zeros((100, 400), dtype='uint8')
 ```
-# Create the Text using cv2.putText
+### Create the Text using cv2.putText
 ```
 # Put some text on the image for demonstration
 cv2.putText(img, 'KOUSALYA', (60, 70), cv2.FONT_HERSHEY_SIMPLEX, 2, (255), 5)
 ```
 
 
-# Create the structuring element
+### Create the structuring element
 ```
 # Create a rectangular structuring element
 kernel_size = (5, 5)  # Width and height of the kernel
@@ -55,7 +55,7 @@ dilated_image = cv2.dilate(img, structuring_element, iterations=1)
 # Display the original, eroded, and dilated images
 plt.figure(figsize=(15, 5))
 ```
-# Original Image
+### Original Image
 ```
 # Original Image
 
@@ -67,7 +67,7 @@ plt.show()
 ```
 ![image](https://github.com/user-attachments/assets/0acc80d4-d134-4bba-ad3f-086c24b92043)
 
-# Erode the image
+### Erode the image
 ```
 plt.figure(figsize=(15, 5))
 # Eroded Image
@@ -77,10 +77,9 @@ plt.axis('off')
 ```
 ![image](https://github.com/user-attachments/assets/77a86491-44d6-4e0a-9da9-b5556209ab23)
 
-# Dilate the image
+### Dilate the image
 ```
 plt.figure(figsize=(15, 5))
-# Dilated Image
 plt.imshow(dilated_image, cmap='gray')
 plt.title('Dilated Image')
 plt.axis('off')
